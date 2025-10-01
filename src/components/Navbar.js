@@ -4,12 +4,20 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const CustomNavbar = () => {
   return (
-    <Navbar expand="lg" fixed="top" className="navbar-custom">
-      <Container>
-        <Navbar.Brand href="/">CFAT</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+    <Navbar expand="lg" fixed="top" className="navbar-custom" bg="dark" variant="dark">
+      <Container fluid>
+        {/* Brand in the center */}
+        <Navbar.Brand href="/" className="position-absolute start-50 translate-middle-x">
+          CFAT
+        </Navbar.Brand>
+
+        {/* Hamburger toggle button */}
+        <Navbar.Toggle aria-controls="navbar-collapse" />
+
+        {/* Collapsible content */}
+        <Navbar.Collapse id="navbar-collapse">
+          {/* Left: Navigation Links */}
+          <Nav className="me-auto ms-4">
             <LinkContainer to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
@@ -23,7 +31,9 @@ const CustomNavbar = () => {
               <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
           </Nav>
-          <Nav>
+
+          {/* Right: Social Links */}
+          <Nav className="ms-auto me-4">
             <Nav.Link href="https://facebook.com" target="_blank" className="social-icon">
               <i className="fab fa-facebook-f"></i>
             </Nav.Link>

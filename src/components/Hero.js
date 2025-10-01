@@ -6,25 +6,25 @@ import selfImage from '../Assets/self.png';
 const Hero = () => {
   return (
     <section className="hero-section">
-      <Container>
+      <Container fluid>
         <Row className="align-items-center">
           <Col lg={6} className="mb-4 mb-lg-0">
-            <div className="text-center">
+            <div className="d-flex justify-content-center">
               <img 
                 src={selfImage} 
                 alt="Profile" 
-                className="profile-image rounded"
+                className="profile-image"
               />
             </div>
           </Col>
           <Col lg={6}>
-            <h1 className="name-title">Your Name</h1>
-            <p className="job-title">Web Developer & Designer</p>
+            <h1 className="name-title">I'm Shifat Rahman </h1>
+            <p className="job-title">Future-Focused Tech Explorer</p>
             <p className="about-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+        Learning, building, and iterating on personal projects
+         to create clean, elegant and functional solutions.Exploring modern web 
+         technologies while creating practical, minimalistic, and user-focused projects.
+             </p>
             <Link to="/contact">
               <Button className="btn-custom">Contact Me</Button>
             </Link>
