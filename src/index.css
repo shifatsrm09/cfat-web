@@ -1,13 +1,177 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body, #root, .App {
+  background-color: #000000 !important;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000 !important;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Custom black theme with red accents */
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --accent-red: #dc2626;
+  --accent-red-dark: #b91c1c;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+}
+
+.navbar-custom {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-brand {
+  color: var(--accent-red) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-red) !important;
+}
+
+.social-icon {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  margin-left: 1rem;
+}
+
+.social-icon:hover {
+  color: var(--accent-red);
+}
+
+.hero-section {
+  min-height: 100vh;
+  background-color: #000000 !important;
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  
+}
+
+.name-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffffff, var(--accent-red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.job-title {
+  color: var(--accent-red);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-custom {
+  background-color: var(--accent-red);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--accent-red-dark);
+  transform: translateY(-2px);
+}
+
+.page-section {
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: #000000 !important;
+}
+
+/* Form controls */
+.form-control {
+  background-color: #111111 !important;
+  border: 1px solid #333 !important;
+  color: #ffffff !important;
+}
+
+.form-control:focus {
+  background-color: #111111 !important;
+  border-color: var(--accent-red) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 38, 38, 0.25) !important;
+}
+
+.form-label {
+  color: #ffffff !important;
+}
+
+/* Cards */
+.card {
+  background-color: #111111 !important;
+  border: 1px solid #333 !important;
+}
+
+.card-title {
+  color: #ffffff !important;
+}
+
+.card-text {
+  color: var(--text-secondary) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .social-icon {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .profile-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-image {
+    max-width: 250px;
+  }
 }
